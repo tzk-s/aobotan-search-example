@@ -1,0 +1,25 @@
+// 要素セレクターの最小限の初期化（このサンプルで使う要素だけ）
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  color: $color-text;
+  background: $color-bg;
+}
+
+// JS が hidden を付けた要素は、クラスの display 指定より優先して隠す
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  @include focus-ring;
+}
