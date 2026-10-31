@@ -1,0 +1,26 @@
+// このサンプル専用の値（色・余白・角丸）と、px を rem に直す関数
+@use 'sass:math';
+
+$color-text: #1f2933;
+$color-muted: #52606d;
+$color-border: #cbd2d9;
+$color-accent: #1d4e89;
+$color-accent-weak: #e6eef8;
+$color-bg: #ffffff;
+$color-surface: #f5f7fa;
+$color-focus: #f0a500;
+
+$radius: 8px;
+$radius-pill: 999px;
+
+/// px を rem に直す（ブラウザーの文字サイズ設定に合わせて拡大されるように）
+/// @param {Number} $px 単位なしの数値（例: rem(16) → 1rem）
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+/// フォーカスリング（キーボード操作時の表示をそろえる）
+@mixin focus-ring {
+  outline: 3px solid $color-focus;
+  outline-offset: 2px;
+}
