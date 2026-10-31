@@ -1,0 +1,88 @@
+// 施工事例一覧ページ固有のレイアウト（件数・選択中の条件・一覧・該当なし）
+@use '../foundation/variables' as *;
+
+.p-works__heading {
+  margin: 0 0 rem(8);
+  font-size: rem(28);
+}
+
+.p-works__notice {
+  margin: 0 0 rem(32);
+  font-size: rem(14);
+  color: $color-muted;
+}
+
+.p-works__status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(12) rem(24);
+  align-items: center;
+  margin: rem(32) 0 rem(16);
+}
+
+.p-works__count {
+  margin: 0;
+  font-weight: 700;
+}
+
+.p-works__selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(8);
+  align-items: center;
+}
+
+.p-works__selected-label {
+  margin: 0;
+  font-size: rem(14);
+  color: $color-muted;
+}
+
+.p-works__selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// 選択中の条件（JS が生成。押すとその条件を解除）
+.p-works__chip {
+  min-height: rem(36);
+  padding: rem(4) rem(12);
+  font: inherit;
+  font-size: rem(14);
+  color: $color-accent;
+  cursor: pointer;
+  background: $color-accent-weak;
+  border: 1px solid $color-accent;
+  border-radius: $radius-pill;
+
+  &::before {
+    content: '×';
+    margin-right: rem(4);
+  }
+}
+
+// 画面幅に応じて列数が変わる一覧（ブレークポイントを使わず、カードの最小幅で決める）
+.p-works__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, rem(300)), 1fr));
+  gap: rem(24);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.p-works__empty {
+  padding: rem(32) rem(16);
+  text-align: center;
+  background: $color-surface;
+  border-radius: $radius;
+}
+
+.p-works__empty-title {
+  margin: 0 0 rem(8);
+  font-weight: 700;
+}
