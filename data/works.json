@@ -1,0 +1,98 @@
+{
+  "axes": [
+    {
+      "key": "type",
+      "label": "工事種別",
+      "categories": [
+        { "key": "new-build", "label": "新築" },
+        { "key": "renovation", "label": "リフォーム・改修" },
+        { "key": "interior", "label": "内装工事" },
+        { "key": "exterior", "label": "外装・外構" }
+      ]
+    },
+    {
+      "key": "area",
+      "label": "エリア",
+      "categories": [
+        { "key": "osaka-city", "label": "大阪市" },
+        { "key": "osaka-pref", "label": "大阪府（大阪市以外）" },
+        { "key": "hyogo", "label": "兵庫県" },
+        { "key": "kyoto", "label": "京都府" },
+        { "key": "nara", "label": "奈良県" }
+      ]
+    },
+    {
+      "key": "building",
+      "label": "建物種別",
+      "categories": [
+        { "key": "house", "label": "戸建住宅" },
+        { "key": "apartment", "label": "集合住宅" },
+        { "key": "office", "label": "オフィス・店舗" },
+        { "key": "factory", "label": "工場・倉庫" },
+        { "key": "public", "label": "公共施設" }
+      ]
+    }
+  ],
+  "works": [
+    {
+      "id": "d01",
+      "title": "中庭でつながる二世帯住宅",
+      "summary": "玄関と水回りを世帯ごとに分け、中庭を介して行き来できる間取りにした架空の事例です。",
+      "categories": { "type": ["new-build"], "area": ["osaka-pref"], "building": ["house"] }
+    },
+    {
+      "id": "d02",
+      "title": "マンション一室の間取り変更",
+      "summary": "間仕切りを減らし、南側の光を奥の部屋まで届けた架空のリノベーション事例です。",
+      "categories": { "type": ["renovation", "interior"], "area": ["osaka-city"], "building": ["apartment"] }
+    },
+    {
+      "id": "d03",
+      "title": "商店街に面した店舗の外観改修",
+      "summary": "看板と庇を一体でつくり直し、通りからの見え方を整えた架空の事例です。",
+      "categories": { "type": ["renovation", "exterior"], "area": ["hyogo"], "building": ["office"] }
+    },
+    {
+      "id": "d04",
+      "title": "倉庫の外壁・屋根の改修",
+      "summary": "操業を止めない工程で外壁と屋根を張り替えた架空の事例です。",
+      "categories": { "type": ["renovation", "exterior"], "area": ["hyogo"], "building": ["factory"] }
+    },
+    {
+      "id": "d05",
+      "title": "地域ホールの内装更新",
+      "summary": "床・壁・照明を更新し、多目的に使える明るいホールにした架空の事例です。",
+      "categories": { "type": ["interior"], "area": ["osaka-pref"], "building": ["public"] }
+    },
+    {
+      "id": "d06",
+      "title": "古い木造住宅の耐震補強と水回り改修",
+      "summary": "既存の柱や梁を生かしながら、耐震補強と台所・浴室の改修を行った架空の事例です。",
+      "categories": { "type": ["renovation"], "area": ["kyoto"], "building": ["house"] }
+    },
+    {
+      "id": "d07",
+      "title": "小規模オフィスの新築",
+      "summary": "打ち合わせスペースを1階に集め、執務室を2階にまとめた架空の事例です。",
+      "categories": { "type": ["new-build"], "area": ["osaka-city"], "building": ["office"] }
+    },
+    {
+      "id": "d08",
+      "title": "集合住宅の外構と駐輪場の整備",
+      "summary": "アプローチの段差をなくし、屋根付きの駐輪場を設けた架空の事例です。",
+      "categories": { "type": ["exterior"], "area": ["nara"], "building": ["apartment"] }
+    },
+    {
+      "id": "d09",
+      "title": "庭とつながる平屋の新築",
+      "summary": "すべての部屋から庭に出られる、ワンフロアで暮らす平屋の架空の事例です。",
+      "categories": { "type": ["new-build"], "area": ["kyoto"], "building": ["house"] }
+    },
+    {
+      "id": "d10",
+      "title": "保育施設の内装改修",
+      "summary": "角を丸めた造作家具と、掃除しやすい床材に入れ替えた架空の事例です。",
+      "categories": { "type": ["renovation", "interior"], "area": ["nara"], "building": ["public"] }
+    }
+  ]
+}
