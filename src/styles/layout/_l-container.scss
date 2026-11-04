@@ -1,0 +1,8 @@
+// ページの幅と左右の余白
+@use '../foundation/variables' as *;
+
+.l-container {
+  max-width: rem(1120);
+  margin-inline: auto;
+  padding: rem(48) rem(16) rem(80);
+}

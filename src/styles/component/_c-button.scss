@@ -1,0 +1,14 @@
+// 枠線だけの小さなボタン（条件のクリアなど）
+@use '../foundation/variables' as *;
+
+.c-button {
+  min-height: rem(36);
+  padding: rem(4) rem(12);
+  font: inherit;
+  font-size: rem(14);
+  color: $color-text;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+}

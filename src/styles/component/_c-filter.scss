@@ -1,0 +1,90 @@
+// 分類ごとのチェックボックスを並べた絞り込みフォーム
+@use '../foundation/variables' as *;
+
+.c-filter {
+  padding: rem(24);
+  background: $color-surface;
+  border-radius: $radius;
+}
+
+.c-filter__heading {
+  margin: 0 0 rem(4);
+  font-size: rem(18);
+}
+
+.c-filter__help {
+  margin: 0 0 rem(16);
+  font-size: rem(14);
+  color: $color-muted;
+}
+
+.c-filter__fields {
+  display: grid;
+  gap: rem(16);
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  // 初期化が終わるまでは操作できないことを見た目でも示す
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.c-filter__group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.c-filter__label {
+  margin-bottom: rem(8);
+  padding: 0;
+  font-weight: 700;
+}
+
+.c-filter__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(8);
+}
+
+.c-filter__option {
+  position: relative;
+  cursor: pointer;
+}
+
+// チェックボックス本体は見えなくし、ラベル全体を押せる形にする（キーボード操作・読み上げは残る）
+.c-filter__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.c-filter__tag {
+  display: inline-block;
+  min-height: rem(36);
+  padding: rem(4) rem(14);
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+
+  // 色だけに頼らず、記号でも選択中であることを示す
+  .c-filter__checkbox:checked + & {
+    color: #ffffff;
+    background: $color-accent;
+    border-color: $color-accent;
+
+    &::before {
+      content: '✓ ';
+    }
+  }
+
+  .c-filter__checkbox:focus-visible + & {
+    @include focus-ring;
+  }
+}
+
+.c-filter__notice {
+  margin: rem(16) 0 0;
+  font-size: rem(14);
+}
