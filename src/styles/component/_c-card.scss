@@ -1,0 +1,46 @@
+// 事例カード（画像なしの簡素な形）
+@use '../foundation/variables' as *;
+
+.c-card {
+  height: 100%;
+  padding: rem(20);
+  border: 1px solid $color-border;
+  border-radius: $radius;
+}
+
+.c-card__badge {
+  display: inline-block;
+  margin: 0 0 rem(8);
+  padding: 0 rem(8);
+  font-size: rem(12);
+  color: $color-muted;
+  border: 1px dashed $color-muted;
+  border-radius: 4px;
+}
+
+.c-card__title {
+  margin: 0 0 rem(8);
+  font-size: rem(17);
+}
+
+.c-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(4);
+  margin: 0 0 rem(8);
+  padding: 0;
+  list-style: none;
+}
+
+.c-card__tag {
+  padding: 0 rem(8);
+  font-size: rem(12);
+  background: $color-accent-weak;
+  border-radius: 4px;
+}
+
+.c-card__text {
+  margin: 0;
+  font-size: rem(14);
+  color: $color-muted;
+}
